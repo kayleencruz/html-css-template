@@ -5,28 +5,335 @@
 
 
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML/CSS Studio</title>
-    <!-- import CSS styles -->
-    <link rel="stylesheet" href="styles.css" /> 
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gage Middle School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a6122f212c.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainRed: "#A30606",  
+              mainYellow: "#F7C036", 
+              secondaryGrey: "#D9D9D9",  
+              gold: "#B07F02",
+            },
+            fontFamily: {
+              title: ["Black Ops One"],
+              heading: ["Bebas Neue"],
+              body: ["Nunito Sans"],
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="font-body flex flex-col w-full">
+  <header class="bg-white text-mainRed p-4 relative">
+    <div class="flex items-center justify-start justify-center relative">
 
-  <!-- page content goes into <body> -->
-  <body>
-    <div id="logoBar">
-      <h1>Welcome to 100 Acre Wood!</h1>
-      <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/Header.png"/>
-      <h3>We're glad you're here :D</h3>
-    </div>
-    <hr/>
-    <div id="staffGallery">
-      <img class="galleryImage" src="./assets/Eeyore-Eh.png"/>
-      <img class="galleryImage" src="./assets/Eeyore-Zz.png"/>
-      <img class="galleryImage" src="./assets/Kanga-Roo.png"/>
-      <img class="galleryImage" src="./assets/Owl-Phone.png"/>
-    </div>
-  </body>
+        <img src="./assets/spartans-removebg-preview.png" alt="School Logo" class="h-24 lg:h-36 lg:absolute lg:left-10">
 
+        <div class="text-left">
+            <h1 class="text-3xl md:text-4xl font-title leading-none pl-16 -m-2">Henry T</h1>
+            <h1 class="text-5xl md:text-6xl font-title">
+                <span class="text-6xl md:text-8xl">G</span>age 
+                <span class="text-6xl md:text-8xl">M</span>iddle 
+                <span class="text-6xl md:text-8xl">S</span>chool
+            </h1>
+        </div>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="bg-mainRed text-white sticky top-0 z-50 shadow-md font-heading text-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center py-3">
+          <h1 class="text-xl font-bold md:hidden flex-1 text-center">Menu</h1>
+          <label for="menu-toggle" class="md:hidden text-2xl cursor-pointer">
+              ☰
+          </label>
+          <input type="checkbox" id="menu-toggle" class="hidden peer">
+            <ul class="hidden peer-checked:flex flex-col absolute top-full left-0 w-full bg-mainRed 
+                      text-center md:flex md:flex-row md:static md:justify-center md:bg-transparent md:justify-between">
+              <li><a href="#" class="block py-2 px-4 text-white hover:underline">Home</a></li>
+              <li><a href="#" class="block py-2 px-4 text-white hover:underline">About Us</a></li>
+              <li><a href="#" class="block py-2 px-4 text-white hover:underline">Academies</a></li>
+              <li><a href="#" class="block py-2 px-4 text-white hover:underline">Offices</a></li>
+              <li><a href="#" class="block py-2 px-4 text-white hover:underline">Programs</a></li>
+              <li><a href="#" class="block py-2 px-4 text-white hover:underline">Services</a></li>
+              <li><a href="#" class="block py-2 px-4 text-white hover:underline">Staff</a></li>
+              <li><a href="#" class="block py-2 px-4 text-white hover:underline">Tech</a></li>
+              <li><a href="#" class="block py-2 px-4 text-white hover:underline">Calendar</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="relative w-full h-full">
+    <img src="assets/cover_gms.jpg" alt="School Group Photo" 
+         class="w-full md:max-h-[75vh] object-cover">
+
+    <!-- <div class="absolute bottom-0 w-full bg-mainRed bg-opacity-75 flex flex-wrap justify-center items-center text-white p-8"> -->
+    <!-- <div class="relative w-full bg-mainRed bg-opacity-75 flex flex-wrap justify-center items-center text-white p-8 
+      md:absolute md:bottom-0 md:w-full md:bg-opacity-75 md:flex md:justify-center md:items-center "> -->
+    <div class="relative w-full bg-mainRed text-white  grid gap-6 p-8 
+      md:absolute md:bottom-0 md:w-full md:bg-opacity-60">
+     
+
+     <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 justify-items-center">
+        <div class="flex flex-col items-center p-2 hover:text-mainYellow">
+            <i class="fas fa-chalkboard-teacher text-7xl pb-2"></i>
+            <p class="font-heading text-2xl hover:underline">Staff</p>
+        </div>
+        <div class="flex flex-col items-center text-center px-4 py-2 hover:text-mainYellow">
+            <i class="fas fa-calendar-alt text-7xl pb-2 "></i>
+            <p class="font-heading text-2xl text-center hover:underline">Student Events</p>
+        </div>
+        <div class="flex flex-col items-center px-4 py-2 text-center hover:text-mainYellow">
+            <i class="fas fa-apple-alt text-7xl pb-2"></i>
+            <p class="font-heading text-2xl hover:underline">MISIS</p>
+        </div>
+        <div class="flex flex-col items-center px-4 py-2 text-center hover:text-mainYellow">
+            <i class="fas fa-heartbeat text-7xl pb-2"></i>
+            <p class="font-heading text-2xl hover:underline">Wellness</p>
+        </div>
+        <div class="flex flex-col items-center px-4 py-2 text-center hover:text-mainYellow">
+            <i class="fas fa-graduation-cap text-7xl pb-2 "></i>
+            <p class="font-heading text-2xl text-center hover:underline">Schoology</p>
+        </div>
+        <div class="flex flex-col items-center px-4 py-2 max-w-24 text-center hover:text-mainYellow">
+            <i class="fas fa-user-tie text-7xl pb-2"></i>
+            <p class="font-heading text-2xl hover:underline">Counselor’s Corner</p>
+        </div>
+        <div class="flex flex-col items-center px-4 py-2 text-center hover:text-mainYellow">
+            <i class="fas fa-book text-7xl pb-2"></i>
+            <p class="font-heading text-2xl hover:underline">Library</p>
+        </div>
+        <div class="flex flex-col items-center px-4 py-2 text-center hover:text-mainYellow">
+            <i class="fas fa-users-cog text-7xl pb-2"></i>
+            <p class="font-heading text-2xl hover:underline">Family Access</p>
+        </div>
+      </div>
+      </div>
+    </section>
+  
+
+    <section class="pt-8 text-center bg-secondaryGrey w-full place-items-center">
+        <h2 class="text-4xl font-heading pt-2">Academies</h2>
+        <div class="w-16 border-b-4 border-gold pt-2"></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4 font-heading text-2xl w-full md:max-w-5xl pt-4 pb-8">
+            <div><img src="./assets/hhsa.jpg" alt="HHSA" class="mx-auto h-32"><p class="pt-4 hover:underline">HHSA</p></div>
+            <div><img src="./assets/ltech.png" alt="L-Tech" class="mx-auto h-32"><p class="pt-4 hover:underline">L-Tech</p></div>
+            <div><img src="./assets/vapata.png" alt="VAPATA" class="mx-auto h-32"><p class="pt-4 hover:underline">VAPATA</p></div>
+            <div><img src="./assets/magnet.png" alt="Magnet" class="mx-auto h-32"><p class="pt-4 hover:underline">Magnet</p></div>
+        </div>
+    </section>
+    </body>
+    
+    <section class="bg-mainYellow pt-8 text-center place-items-center">
+        <h2 class="text-4xl font-heading pt-2">Frequently Visited Resources</h2>
+        <div class="w-16 border-b-4 border-gold pt-2"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 w-full md:max-w-5xl font-heading text-2xl pt-4">
+            <div>
+              <img src="./assets/dress-code.png" alt="Dress Code" class="mx-auto w-64 h-80 object-cover rounded-3xl">
+              <p class="pt-4 hover:underline">Dress Code</p>
+            </div>
+        
+            <div><img src="./assets/important-dates.png" alt="Important Dates" class="mx-auto w-64 h-80 object-cover rounded-3xl"><p class="pt-4 hover:underline">Important Dates</p></div>
+            <div><img src="./assets/bell-schedule.png" alt="Bell Schedule" class="mx-auto w-64 h-80 object-cover rounded-3xl"><p class="pt-4 hover:underline">2024-2025 Bell Schedule</p></div>
+        </div>
+
+        <button class="mx-4 mt-8 mb-8 bg-red-700 text-white font-semibold px-4 py-2 hover:bg-red-800">Show All Resouces</button>
+    </section>
+
+    <section class="w-full flex flex-col md:flex-row lg:flex-row ">
+      <div class="p-8 bg-white md:w-1/2">
+        <h1 class="text-4xl font-heading pt-2 pb-8"> Calendar</h1>
+
+        <div class="space-y-8">
+          <div class="flex flex-row items-center">
+            <div class="flex flex-col justify-center items-center px-4">
+              <p class="text-gold font-body text-xl pb-1">March</p>
+              <p class="text-6xl font-heading">13</p>
+            </div>  
+            <div class="h-20 border-l-2 border-gold pr-8"></div>
+            <div>
+              <p class="font-body text-2xl pb-1 hover:underline">Coffee with the Principal</p>
+              <p class="font-light font-body">Time: 9AM – 10:30 AM</p>
+            </div>
+          </div>
+
+          <div class="flex flex-row items-center">
+            <div class="flex flex-col justify-center items-center px-4">
+              <p class="text-gold font-body text-xl pb-1">March</p>
+              <p class="text-6xl font-heading">14</p>
+            </div>  
+            <div class="h-20 border-l-2 border-gold pr-8"></div>
+            <div>
+              <p class="font-body text-2xl pb-1 hover:underline">Coffee with the Principal</p>
+              <p class="font-light font-body">Time: 9AM – 10:30 AM</p>
+            </div>
+          </div>
+
+          <div class="flex flex-row items-center">
+            <div class="flex flex-col justify-center items-center px-4">
+              <p class="text-gold font-body text-xl pb-1">March</p>
+              <p class="text-6xl font-heading">15</p>
+            </div>  
+            <div class="h-20 border-l-2 border-gold pr-8"></div>
+            <div>
+              <p class="font-body text-2xl pb-1 hover:underline">Awards Assembly</p>
+              <p class="font-light font-body">Time: 9AM – 1 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="mx-4 mt-8 mb-4 bg-red-700 text-white font-semibold px-4 py-2 hover:bg-red-800">Show Calendar</button>
+
+      </div>
+
+      
+
+      <div class="p-8 bg-secondaryGrey md:w-1/2">
+        <h1 class="text-4xl font-heading pt-2 pb-8"> News & Announcments</h1>
+
+        <div class=" space-y-10 pl-4">
+
+          <div class="flex flex-col md:flex md:flex-row">
+            <img src="./assets/school-experience-survey.jpg" alt="School Experiene Survey Flyer" class="w-64 h-40 md:max-w-48 md:h-32 object-cover rounded-3xl">
+            <div class="flex flex-col md:pl-8 min-w-0 max-w-48 flex-1">
+              <h1 class="font-body text-2xl pt-6 md:pt-0 hover:underline"> Parent Survey 2024-2025</h1>
+              <div class="w-16 border-b-4 border-gold pt-2"></div>
+              <!-- <p class="pt-4 font-light hover:text-blue-600">Read More +</p> -->
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex md:flex-row">
+            <img src="./assets/families-connected.png" alt="Families Connected Flyer" class="w-64 h-40 md:max-w-48 md:h-32 object-cover rounded-3xl">
+            <div class="flex flex-col md:pl-8 min-w-0 max-w-48 flex-1">
+              <h1 class="font-body text-2xl pt-6 md:pt-0 hover:underline"> Families Connected</h1>
+              <div class="w-16 border-b-4 border-gold pt-2"></div>
+              <!-- <p class="pt-4 font-light hover:text-blue-600">Read More +</p> -->
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex md:flex-row">
+            <img src="./assets/elac-meetings.png" alt="Elac and School Council Meeting flyer" class="w-64 h-40 md:max-w-48 md:h-32 object-cover rounded-3xl">
+            <div class="flex flex-col md:pl-8 min-w-0 max-w-48 flex-1">
+              <h1 class="font-body text-2xl pt-6 md:pt-0 hover:underline"> ELAC and School Council Meeting</h1>
+              <div class="w-16 border-b-4 border-gold pt-2"></div>
+              <!-- <p class="pt-4 font-light hover:text-blue-600">Read More +</p> -->
+            </div>
+          </div>
+        </div>
+        <button class="mx-4 mt-8 mb-4 bg-red-700 text-white font-semibold px-4 py-2 hover:bg-red-800">Show All News</button>
+      </div>
+    </section>
+
+    <div class="w-full bg-mainYellow py-10">
+      <h2 class="text-4xl font-heading text-center">MEDIA GALLERY</h2>
+      <div class="w-16 border-b-4 border-gold mx-auto mt-2"></div>
+  
+      <div class="relative w-full max-w-2xl mx-auto mt-6 px-4 sm:px-6">
+          <div class="relative w-full overflow-hidden rounded-3xl max-h-96">
+              <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+                  <img src="./assets/gms-ariel.jpg" class="w-full max-w-2xl max-h-96 object-cover flex-shrink-0" />
+                  <img src="./assets/gms-building.jpg" class="w-full max-w-2xl max-h-96 object-cover flex-shrink-0" />
+                  <img src="./assets/gms-library.jpg" class="w-full max-w-2xl max-h-96 object-cover flex-shrink-0" />
+              </div>
+          </div>
+  
+          <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-75 text-white p-4 rounded-full"
+              onclick="prevSlide()">
+              ◀
+          </button>
+          <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-75 text-white p-4 rounded-full"
+              onclick="nextSlide()">
+              ▶
+          </button>
+      </div>
+    </div>
+  
+  
+
+    <section class="w-full bg-mainRed text-white place-items-center">
+      <div class="w-5/6 flex flex-col md:flex-row justify-between justify-center">
+        <div class="flex flex-col space-y-4 pt-12 pl-6">
+          <h1 class="font-heading text-2xl pb-2">Henry T Gage Middle School</h1>
+
+          <div class="flex flex-row items-center">
+            <i class="fa-solid fa-location-dot pr-5"></i>
+            <p class="font-body hover:underline">2880 E. Gage Ave. Huntington Park CA 90255</p>
+          </div>
+
+          <div class="flex flex-row items-center">
+            <i class="fa-solid fa-phone pr-4"></i>
+            <p class="font-body hover:underline">323-826-1500</p>
+          </div>
+
+          <div class="flex flex-row items-center">
+            <i class="fa-solid fa-fax pr-4"></i>
+            <p class="font-body hover:underline">323-589-6925</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col space-y-4 pt-12 pl-6">
+          <h1 class="font-heading text-2xl pb-2">Quick Links</h1>
+          <ul class="list-disc list-inside">
+            <li class="hover:underline">Zone of Choice </li>
+            <li class="hover:underline">Achieve 3000</li>
+            <li class="hover:underline">Connect-ED</li>
+            <li class="hover:underline">LAUSD</li>
+            <li class="hover:underline">Dreamers</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col space-y-4 pt-12 pl-6 pb-8">
+          <h1 class="font-heading text-2xl pb-2">Student Links</h1>
+          <ul class="list-disc list-inside">
+            <li class="hover:underline">BrainPop </li>
+            <li class="hover:underline">Its your game: Keep it Real</li>
+            <li class="hover:underline">My Mail</li>
+            <li class="hover:underline">myNGconnect.com</li>
+            <li class="hover:underline">SRI College and Career</li>
+            <li class="hover:underline">Teen Line</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+  
+    <script>
+        let index = 0;
+        const images = document.getElementById("carousel");
+    
+        function showSlide() {
+            images.style.transform = `translateX(${-index * 100}%)`;
+        }
+    
+        function prevSlide() {
+            index = (index > 0) ? index - 1 : images.children.length - 1;
+            showSlide();
+        }
+    
+        function nextSlide() {
+            index = (index < images.children.length - 1) ? index + 1 : 0;
+            showSlide();
+        }
+    </script>
+</body>
 </html>
+  
