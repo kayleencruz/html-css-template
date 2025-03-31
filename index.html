@@ -38,8 +38,8 @@
     </script>
 </head>
 <body class="font-body flex flex-col w-full">
-  <header class="bg-white text-mainRed p-4 relative">
-    <div class="flex items-center justify-start justify-center relative">
+  <!-- <header class="bg-white text-mainRed p-4 relative">
+    <div class="flex items-center text-center justify-start justify-center relative">
 
         <img src="./assets/spartans-removebg-preview.png" alt="School Logo" class="h-24 lg:h-36 lg:absolute lg:left-10">
 
@@ -52,17 +52,54 @@
             </h1>
         </div>
     </div>
+  </header> -->
+
+  <!-- <header class="bg-white text-mainRed p-4">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left gap-4 lg:gap-10">
+
+        <img src="./assets/spartans-removebg-preview.png" alt="School Logo"
+             class="h-24 sm:h-28 lg:h-36 w-auto lg:ml-6 lg:mr-4">
+
+
+
+        <h1 class="text-3xl md:text-4xl font-title leading-none pl-16 -m-2">Henry T</h1>
+        <h1 class="text-4xl md:text-6xl font-title">
+            <span class="text-4xl md:text-5xl">G</span>age 
+            <span class="text-4xl md:text-5xl">M</span>iddle 
+            <span class="text-4xl md:text-5xl">S</span>chool
+        </h1>
+
+    </div>
+  </header> -->
+
+  <header class="bg-white p-4">
+    <div class="container mx-auto flex items-center justify-between lg:justify-center">
+      <div class="flex-shrink-0">
+        <img src="./assets/spartans-removebg-preview.png" alt="School Logo" class="h-16 md:h-24 w-auto">
+      </div>
+
+      <h1 class="block text-4xl md:text-6xl font-title text-mainRed text-center mx-auto">
+        <span class="block text-2xl md:text-4xl 2xl:text-5xl font-title">Henry T</span>
+        <span class="text-5xl md:text-6xl 2xl:text-7xl">G</span>age 
+        <span class="text-5xl md:text-6xl 2xl:text-7xl">M</span>iddle 
+        <span class="text-5xl md:text-6xl 2xl:text-7xl">S</span>chool
+        <!-- Gage Middle School -->
+      </h1>
+
+    </div>
   </header>
+  
 
   <!-- Navbar -->
-  <nav class="bg-mainRed text-white sticky top-0 z-50 shadow-md font-heading text-xl">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center py-3">
+  <nav class="bg-mainRed text-white sticky top-0 z-50 shadow-md font-heading text-xl 2xl:text-5xl px-8">
+    <div class="w-[80%] md:w-full lg:w-[80%] max-w-8xl 2xl:w-[80%] mx-auto">
+      <div class="flex justify-between items-center justify-center py-3">
           <h1 class="text-xl font-bold md:hidden flex-1 text-center">Menu</h1>
           <label for="menu-toggle" class="md:hidden text-2xl cursor-pointer">
               ☰
           </label>
           <input type="checkbox" id="menu-toggle" class="hidden peer">
+
             <ul class="hidden peer-checked:flex flex-col absolute top-full left-0 w-full bg-mainRed 
                       text-center md:flex md:flex-row md:static md:justify-center md:bg-transparent md:justify-between">
               <li><a href="#" class="block py-2 px-4 text-white hover:underline">Home</a></li>
@@ -87,9 +124,8 @@
     <!-- <div class="absolute bottom-0 w-full bg-mainRed bg-opacity-75 flex flex-wrap justify-center items-center text-white p-8"> -->
     <!-- <div class="relative w-full bg-mainRed bg-opacity-75 flex flex-wrap justify-center items-center text-white p-8 
       md:absolute md:bottom-0 md:w-full md:bg-opacity-75 md:flex md:justify-center md:items-center "> -->
-    <div class="relative w-full bg-mainRed text-white  grid gap-6 p-8 
-      md:absolute md:bottom-0 md:w-full md:bg-opacity-60">
-     
+    <div class="relative w-full bg-mainRed text-white grid gap-6 p-8 
+      md:absolute md:bottom-0 md:w-full md:bg-opacity-60 2xl:px-64">
 
      <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 justify-items-center">
         <div class="flex flex-col items-center p-2 hover:text-mainYellow">
@@ -101,15 +137,15 @@
             <p class="font-heading text-2xl text-center hover:underline">Student Events</p>
         </div>
         <div class="flex flex-col items-center px-4 py-2 text-center hover:text-mainYellow">
-            <i class="fas fa-apple-alt text-7xl pb-2"></i>
+            <i class="fas fa-apple-alt text-7xl  pb-2"></i>
             <p class="font-heading text-2xl hover:underline">MISIS</p>
         </div>
         <div class="flex flex-col items-center px-4 py-2 text-center hover:text-mainYellow">
-            <i class="fas fa-heartbeat text-7xl pb-2"></i>
+            <i class="fas fa-heartbeat text-7xl  pb-2"></i>
             <p class="font-heading text-2xl hover:underline">Wellness</p>
         </div>
         <div class="flex flex-col items-center px-4 py-2 text-center hover:text-mainYellow">
-            <i class="fas fa-graduation-cap text-7xl pb-2 "></i>
+            <i class="fas fa-graduation-cap text-7xl  pb-2 "></i>
             <p class="font-heading text-2xl text-center hover:underline">Schoology</p>
         </div>
         <div class="flex flex-col items-center px-4 py-2 max-w-24 text-center hover:text-mainYellow">
@@ -144,8 +180,7 @@
     <section class="bg-mainYellow pt-8 text-center place-items-center">
         <h2 class="text-4xl font-heading pt-2">Frequently Visited Resources</h2>
         <div class="w-16 border-b-4 border-gold pt-2"></div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 w-full md:max-w-5xl font-heading text-2xl pt-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 w-full md:max-w-5xl font-heading text-2xl pt-4 px-8">
             <div>
               <img src="./assets/dress-code.png" alt="Dress Code" class="mx-auto w-64 h-80 object-cover rounded-3xl">
               <p class="pt-4 hover:underline">Dress Code</p>
@@ -155,12 +190,13 @@
             <div><img src="./assets/bell-schedule.png" alt="Bell Schedule" class="mx-auto w-64 h-80 object-cover rounded-3xl"><p class="pt-4 hover:underline">2024-2025 Bell Schedule</p></div>
         </div>
 
+
         <button class="mx-4 mt-8 mb-8 bg-red-700 text-white font-semibold px-4 py-2 hover:bg-red-800">Show All Resouces</button>
     </section>
 
     <section class="w-full flex flex-col md:flex-row lg:flex-row ">
       <div class="p-8 bg-white md:w-1/2">
-        <h1 class="text-4xl font-heading pt-2 pb-8"> Calendar</h1>
+        <h1 class="text-4xl font-heading pt-2 pb-8 text-center md:text-left"> Calendar</h1>
 
         <div class="space-y-8">
           <div class="flex flex-row items-center">
@@ -199,17 +235,19 @@
             </div>
           </div>
         </div>
-
-        <button class="mx-4 mt-8 mb-4 bg-red-700 text-white font-semibold px-4 py-2 hover:bg-red-800">Show Calendar</button>
+        
+        <div class="flex flex-col items-center md:items-start">
+          <button class="mx-4 mt-8 mb-4 bg-red-700 text-white font-semibold px-4 py-2 hover:bg-red-800">Show Calendar</button>
+        </div>
 
       </div>
 
       
 
       <div class="p-8 bg-secondaryGrey md:w-1/2">
-        <h1 class="text-4xl font-heading pt-2 pb-8"> News & Announcments</h1>
+        <h1 class="text-4xl font-heading pt-2 pb-8 text-center md:text-left"> News & Announcments</h1>
 
-        <div class=" space-y-10 pl-4">
+        <div class="flex flex-col items-center md:items-start space-y-10 pl-4 ">
 
           <div class="flex flex-col md:flex md:flex-row">
             <img src="./assets/school-experience-survey.jpg" alt="School Experiene Survey Flyer" class="w-64 h-40 md:max-w-48 md:h-32 object-cover rounded-3xl">
@@ -237,8 +275,10 @@
               <!-- <p class="pt-4 font-light hover:text-blue-600">Read More +</p> -->
             </div>
           </div>
+
+          <button class="mx-4 mt-8 mb-4 bg-red-700 text-white font-semibold px-4 py-2 hover:bg-red-800">Show All News</button>
         </div>
-        <button class="mx-4 mt-8 mb-4 bg-red-700 text-white font-semibold px-4 py-2 hover:bg-red-800">Show All News</button>
+        
       </div>
     </section>
 
